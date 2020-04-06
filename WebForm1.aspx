@@ -39,13 +39,16 @@
 
     <div style="text-align:center">
 	    <form>
-		    <label for="gameName">Name of Game:</label>
-    		<label for="gameDev">Developer:</label>
-	    	<label for="gameRating">Rating of game, 1-5:</label>
-    		<br/>
-    		<input type="text" id="gameName" name="gameName"/>
-    		<input type="text" id="gameDev" name="gameDev"/>
-	    	<input type="number" id="gameRating" name="gameRating"/>
+    		<input type="text" id="gameName" name="gameName" placeholder="Game Title" />
+    		<input type="text" id="gameDev" name="gameDev" placeholder="Game Dev" />
+	    	<select id="gameRating" name="gameRating">
+                <option>Rating</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
 
 	        <input type="submit" value="Submit"/>
 	    </form>

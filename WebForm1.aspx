@@ -41,7 +41,8 @@
     <div class="div1">
         <img src="https://www.publicdomainpictures.net/pictures/260000/velka/portal.jpg" alt="Aperture Programming" width="150" height="150"/>
     </div>
-    <div style="text-align:center; font:RoyalBlue;">
+    <div style="text-align: center; color:RoyalBlue">
+    <div style="text-align:center">
         <h1>Aperture Programming</h1>
         <br/>
         <h2>Project Glados</h2>
@@ -52,7 +53,8 @@
 	</div>
 	<br/>
 	<div style="text-align:center">
-        <p><b><u>Project Glados is an interactive video game catalog. Please enter either: the name, the devloper, or the rating of a game below to look up.</u></b></p>
+        <p><b><u>Project Glados is an interactive video game catalog. Please enter either: the name, the developer, or the rating of a game below to look up.</u></b></p>
+    </div>
     </div>
 
     <div style="text-align:center">
@@ -79,7 +81,7 @@
             <div>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GladosDB %>" SelectCommand="SELECT [Title], [Price], [GenreId], [Description] FROM [VideoGames]"></asp:SqlDataSource>
             </div>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" Width="75%">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" Width="65%">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" ItemStyle-HorizontalAlign="Center"/>

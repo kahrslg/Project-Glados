@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjectGlados1._0 {
+namespace Project_Glados_master {
 
 
     public partial class WebForm1 {

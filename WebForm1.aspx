@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="ProjectGlados1._0.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Project_Glados_master.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -13,7 +13,7 @@
     input[type=text]{
 	background-color: DarkOrange;
 	height: 30px;
-	boarder: none;
+	border: none;
 	color: black;
 	}
 
@@ -29,7 +29,7 @@
 
     select{
 	background-color: DarkOrange;
-	boarder: none;
+	border: none;
 	color: Black;
 	}
 
@@ -41,12 +41,12 @@
     <div class="div1">
         <img src="https://www.publicdomainpictures.net/pictures/260000/velka/portal.jpg" alt="Aperture Programming" width="150" height="150"/>
     </div>
-    <font color="RoyalBlue">
-    <div style="text-align:center">
+    <div style="text-align:center; font:RoyalBlue">
         <h1>Aperture Programming</h1>
         <br/>
         <h2>Project Glados</h2>
         <br/>
+    </div>
 	<div style="text-align:right">
 	<button class="button">Login</button>
 	</div>
@@ -78,7 +78,7 @@
     <div style="margin: auto; align-items: center">
         <form id="form1" runat="server">
             <div>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GladosDB %>" SelectCommand="SELECT [Title], [Price], [GenreId], [Description] FROM [VideoGames]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProjectGladosDBConnectionString %>" SelectCommand="SELECT [Title], [Price], [GenreId], [Description] FROM [VideoGames]"></asp:SqlDataSource>
             </div>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" Width="75%">
                 <AlternatingRowStyle BackColor="White" />

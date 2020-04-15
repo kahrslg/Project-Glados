@@ -17,6 +17,16 @@
 	color: black;
 	}
 
+    .button{
+	background-color: DarkOrange;
+	height: 40px;
+	width: 75px;
+	text-align:center;
+	color: black;
+	cursor: pointer;
+	border: none;
+	}
+
     select{
 	background-color: DarkOrange;
 	boarder: none;
@@ -36,7 +46,12 @@
         <h1>Aperture Programming</h1>
         <br/>
         <h2>Project Glados</h2>
-        <br/><br/>
+        <br/>
+	<div style="text-align:right">
+	<button class="button">Login</button>
+	</div>
+	<br/>
+	<div style="text-align:center">
         <p><b><u>Project Glados is an interactive video game catalog. Please enter either: the name, the devloper, or the rating of a game below to look up.</u></b></p>
     </div>
 

@@ -1,66 +1,69 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="ProjectGlados1._0.WebForm1" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="ProjectGlados1._0.WebForm1" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <style>
+    
+	<style>
 
-    .div1 { 
-    float: left;
-    }
+	.your-element{
+		overflow-y:scroll;
+		}
 
-    input[type=text]{
-	background-color: DarkOrange;
-	height: 30px;
-	boarder: none;
-	color: black;
-	}
+	.div1 {float: left;}
 
-    select{
-	background-color: DarkOrange;
-	boarder: none;
-	color: Black;
-	}
+	.button{
+		background-color: DarkOrange;
+		text-align:center;
+		color: black;
+		cursor: pointer;
+		border: none;
+		}
+	
+	input[type=text]{
+		height: 30px;
+		width: 25%;
+		border: none;
+		background-color:DarkOrange;
+		color: Black;
+		}
 
-    </style>
-    <title>Project Glados</title>
+	input[type=submit]{
+		<--background-color: DarkOrange;--!>
+		border: none;
+		color: black;
+		cursor: pointer;
+		}
+
+	</style>
+
+<title>Project Glados Extended Results Page</title>
 </head>
 
 <body style="background-color:Black;">
-    <div class="div1">
+
+<div class="div1">
         <img src="https://www.publicdomainpictures.net/pictures/260000/velka/portal.jpg" alt="Aperture Programming" width="150" height="150"/>
     </div>
-    <font color="RoyalBlue">
-    <div style="text-align:center">
-        <h1>Aperture Programming</h1>
-        <br/>
-        <h2>Project Glados</h2>
-        <br/><br/>
-        <p><b><u>Project Glados is an interactive video game catalog. Please enter either: the name, the devloper, or the rating of a game below to look up.</u></b></p>
-    </div>
 
-    <div style="text-align:center">
-	    <form>
-    		<input type="text" id="gameName" name="gameName" placeholder="Game Title" />
-    		<input type="text" id="gameDev" name="gameDev" placeholder="Game Dev" />
-	    	<select id="gameRating" name="gameRating">
-                <--<option style="color:DarkOrange">Rating</option>--!>
-		<option>Rating</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            	</select>
+	<font color="RoyalBlue">
 
-	        <input type="submit" value="Submit"/>
-	    </form>
-    </div>
+	<div style="text-align:center">
+	<h1>Aperture Programming</h1>
+	<h2>Project Glados</h2>
+	<h3>Extended Results</h3>
+	<br/>
 
-    <br />
+	</div>
+	
+	<div style="text-align:right">
+	<button class="button">Back to Main</button>
+	</div>
+	<br/>
+	<br/>
 
-    <div style="margin: auto; align-items: center">
+	<div style="margin: auto; align-items: center">
         <form id="form1" runat="server">
             <div>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GladosDB %>" SelectCommand="SELECT [Title], [Price], [GenreId], [Description] FROM [VideoGames]"></asp:SqlDataSource>
@@ -86,5 +89,6 @@
             </asp:GridView>
         </form>
     </div>
+
 </body>
 </html>

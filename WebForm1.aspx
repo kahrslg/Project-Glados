@@ -13,7 +13,7 @@
     input[type=text]{
 	background-color: DarkOrange;
 	height: 30px;
-	boarder: none;
+	border: none;
 	color: black;
 	}
 
@@ -29,7 +29,7 @@
 
     select{
 	background-color: DarkOrange;
-	boarder: none;
+	border: none;
 	color: Black;
 	}
 
@@ -41,12 +41,12 @@
     <div class="div1">
         <img src="https://www.publicdomainpictures.net/pictures/260000/velka/portal.jpg" alt="Aperture Programming" width="150" height="150"/>
     </div>
-    <font color="RoyalBlue">
-    <div style="text-align:center">
+    <div style="text-align:center; font:RoyalBlue;">
         <h1>Aperture Programming</h1>
         <br/>
         <h2>Project Glados</h2>
         <br/>
+    </div>
 	<div style="text-align:right">
 	<button class="button">Login</button>
 	</div>
@@ -60,8 +60,7 @@
     		<input type="text" id="gameName" name="gameName" placeholder="Game Title" />
     		<input type="text" id="gameDev" name="gameDev" placeholder="Game Dev" />
 	    	<select id="gameRating" name="gameRating">
-                <--<option style="color:DarkOrange">Rating</option>--!>
-		<option>Rating</option>
+		        <option>Rating</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

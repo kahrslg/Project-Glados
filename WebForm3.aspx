@@ -39,7 +39,7 @@
 <title>Project Glados Extended Results Page</title>
 </head>
 
-<body style="background-color:Black;">
+<body style="background-color:#181818;">
 
 <div class="div1">
         <img src="https://www.publicdomainpictures.net/pictures/260000/velka/portal.jpg" alt="Aperture Programming" width="150" height="150"/>

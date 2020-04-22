@@ -37,7 +37,7 @@
     <title>Project Glados</title>
 </head>
 
-<body style="background-color:#181818;" runat = "server">
+<body style="background-color:#181818;" runat="server">
     <div class="div1">
         <img src="https://www.publicdomainpictures.net/pictures/260000/velka/portal.jpg" alt="Aperture Programming" width="150" height="150"/>
     </div>
@@ -47,61 +47,57 @@
         <h2>Project Glados</h2>
         <br/>
     </div>
-    <form runat  ="server" >
-	<div style="text-align:right">
-        <div id ="usernameDisplay" runat ="server" >
-        </div>
-	<asp:Button ID ="BtnLogout" runat ="server" OnClick="BtnLogout_Click" Text ="Logout" style ="background-color: DarkOrange; text-align:center; color: black; cursor: pointer; border: none;"/>
-	</div>
-      
 	<br/>
 	<div style="text-align:center; color:RoyalBlue;">
         <p><b><u>Project Glados is an interactive video game catalog. Please enter either: the name, the devloper, or the rating of a game below to look up.</u></b></p>
     </div>
-    <form>
-    <div style="text-align:center">
-    		<input type="text" id="gameName" name="gameName" placeholder="Game Title" />
-    		<input type="text" id="gameDev" name="gameDev" placeholder="Game Dev" />
-	    	<select id="gameRating" name="gameRating">
-		        <option>Rating</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            	</select>
-
-	        <input type="submit" value="Submit" />
-    </div>
-    </form>
-    <br />
 
     <div style="margin: auto; align-items: center">
-        <form id="form1">
-            <div>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProjectGladosDBConnectionString2 %>" SelectCommand="SELECT [Title], [Price], [GenreId], [Description] FROM [VideoGames]"></asp:SqlDataSource>
+        <form id="form1" runat="server">
+            <div style="text-align:right">
+                <div id ="usernameDisplay" runat ="server" >
+                </div>
+	            <asp:Button ID ="BtnLogout" runat ="server" OnClick="BtnLogout_Click" Text ="Logout" style ="background-color: DarkOrange; text-align:center; color: black; cursor: pointer; border: none;"/>
+	        </div>
+
+            <div style="text-align:center">
+                <asp:TextBox ID="gameTitle" runat="server" placeholder="Game Title"></asp:TextBox>
+                <asp:TextBox ID="gameDeveloper" runat="server" placeholder="Game Developer"></asp:TextBox>
+                <asp:DropDownList ID="gameRating" runat="server">
+                    <asp:ListItem>Rating</asp:ListItem>
+                    <asp:ListItem>0</asp:ListItem>
+                    <asp:ListItem>1</asp:ListItem>
+                    <asp:ListItem>2</asp:ListItem>
+                    <asp:ListItem>3</asp:ListItem>
+                    <asp:ListItem>4</asp:ListItem>
+                    <asp:ListItem>5</asp:ListItem>
+                </asp:DropDownList>
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Search" />
             </div>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" Width="75%" AllowSorting="true">
-                <AlternatingRowStyle BackColor="White" />
-                <Columns>
-                    <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" ItemStyle-HorizontalAlign="Center"/>
-                    <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" ItemStyle-HorizontalAlign="Center"/>
-                    <asp:BoundField DataField="GenreId" HeaderText="GenreId" SortExpression="GenreId" ItemStyle-HorizontalAlign="Center"/>
-                    <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" ItemStyle-HorizontalAlign="Center"/>
-                </Columns>
-                <EditRowStyle BackColor="#7C6F57" />
-                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#E3EAEB" />
-                <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#F8FAFA" />
-                <SortedAscendingHeaderStyle BackColor="#246B61" />
-                <SortedDescendingCellStyle BackColor="#D4DFE1" />
-                <SortedDescendingHeaderStyle BackColor="#15524A" />
-            </asp:GridView>
+
+            <br />
+            
+            <div>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ProjectGladosDBConnectionString2 %>" SelectCommand="SELECT [Title], [Genre], [Company], [Price] FROM [VideoGames]"></asp:SqlDataSource>
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" DataSourceID="SqlDataSource1" GridLines="None" HorizontalAlign="Center" Width="75%" AllowSorting="true" >
+                    <Columns>
+                        <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" ItemStyle-HorizontalAlign="Center"/>
+                        <asp:BoundField DataField="Genre" HeaderText="Genre" SortExpression="Genre" ItemStyle-HorizontalAlign="Center"/>
+                        <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company" ItemStyle-HorizontalAlign="Center"/>
+                        <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" ItemStyle-HorizontalAlign="Center"/>
+                    </Columns>
+                    <FooterStyle BackColor="White" ForeColor="#333333" />
+                    <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="White" ForeColor="#333333" />
+                    <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                    <SortedAscendingHeaderStyle BackColor="#487575" />
+                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                    <SortedDescendingHeaderStyle BackColor="#275353" />
+                </asp:GridView>
+            </div>
         </form>
     </div>
-        </form>
 </body>
 </html>

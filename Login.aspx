@@ -37,8 +37,6 @@
         <img src="https://www.publicdomainpictures.net/pictures/260000/velka/portal.jpg" alt="Aperture Programming" width="150" height="150"/>
     </div>
 
-	<font color="RoyalBlue">
-
 	<div style="text-align:center; color:RoyalBlue">
 	<h1>Aperture Programming</h1>
 	<h2>Project Glados</h2>
@@ -66,12 +64,33 @@
 		<br/>
 		<br/>
 		<asp:Button ID ="BtnLogin" runat ="server" OnClick="BtnLogin_Click" Text ="Login" style ="background-color: DarkOrange; text-align:center; color: black; cursor: pointer; border: none;"/>
+		<asp:Button ID ="Continue" runat ="server" OnClick="Continue_Click" Text ="Continue without logging in" style ="background-color: DarkOrange; text-align:center; color: black; cursor: pointer; border: none;"/>
 		<br/>
 		<br/>
 		<asp:Label ID = "lblErrorMessage" runat = "server"  Text = "incorrect user credentials" ForeColor ="White"></asp:Label>
 		</div>
-	</form>
 
+		<div style="color:RoyalBlue">
+			<h3> Create New Account </h3>
+			<label for="usernameSignUp">Username:</label>
+			<br/>
+			<asp:TextBox ID="usernameSignUp"  placeholder="Username" runat = "server"></asp:TextBox>
+			<br/>
+			<br/>
+			<label for="passwordSignUp">Password:</label>
+			<br/>
+			<asp:TextBox  ID="passwordSignUp"  placeholder="Password" runat = "server" TextMode = "Password"></asp:TextBox>
+			<br/>
+			<br/>
+			<label for="emailSignUp">Email:</label>
+			<br/>
+			<br/>
+			<asp:TextBox  ID="emailSignUp"  placeholder="Email" runat = "server"></asp:TextBox>
+			<br/>
+			<br/>
+			<asp:Button ID ="SignUp" runat ="server" OnClick="SignUp_Click" Text ="Sign Up" style ="background-color: DarkOrange; text-align:center; color: black; cursor: pointer; border: none;"/>
+		</div>
+	</form>
 </body>
 </html>
 

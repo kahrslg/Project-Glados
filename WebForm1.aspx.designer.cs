@@ -7,19 +7,30 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project_Glados_master {
+namespace Project_Glados_master
+{
 
 
-    public partial class WebForm1 {
+    public partial class WebForm1
+    {
 
         /// <summary>
-        /// form1 control.
+        /// usernameDisplay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl usernameDisplay;
+
+        /// <summary>
+        /// BtnLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnLogout;
 
         /// <summary>
         /// SqlDataSource1 control.

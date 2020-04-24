@@ -7,90 +7,92 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project_Glados_master {
+namespace Project_Glados_master
+{
 
 
-    public partial class WebForm1 {
+    public partial class Login
+    {
 
         /// <summary>
-        /// form1 control.
+        /// Username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox Username;
 
         /// <summary>
-        /// usernameDisplay control.
+        /// txtPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl usernameDisplay;
+        protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
-        /// BtnLogout control.
+        /// BtnLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnLogout;
+        protected global::System.Web.UI.WebControls.Button BtnLogin;
 
         /// <summary>
-        /// gameTitle control.
+        /// Continue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox gameTitle;
+        protected global::System.Web.UI.WebControls.Button Continue;
 
         /// <summary>
-        /// gameDeveloper control.
+        /// lblErrorMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox gameDeveloper;
+        protected global::System.Web.UI.WebControls.Label lblErrorMessage;
 
         /// <summary>
-        /// gameRating control.
+        /// usernameSignUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList gameRating;
+        protected global::System.Web.UI.WebControls.TextBox usernameSignUp;
 
         /// <summary>
-        /// Button1 control.
+        /// passwordSignUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.TextBox passwordSignUp;
 
         /// <summary>
-        /// SqlDataSource1 control.
+        /// emailSignUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.TextBox emailSignUp;
 
         /// <summary>
-        /// GridView1 control.
+        /// SignUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button SignUp;
     }
 }

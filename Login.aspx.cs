@@ -19,7 +19,6 @@ namespace Project_Glados_master
 
         protected void BtnLogin_Click(object sender, EventArgs e)
         {
-            lblErrorMessage.Visible = true;
             using (SqlConnection sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["ProjectGladosDBConnectionString2"].ConnectionString))
             {
                 sqlCon.Open();
@@ -41,8 +40,32 @@ namespace Project_Glados_master
 
                 }
             }
-            
+
         }
 
+        protected void Continue_Click(object sender, EventArgs e)
+        {
+            Session["username"] = null;
+            Response.Redirect("WebForm1.aspx");
+        }
+
+        protected void SignUp_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["ProjectGladosDBConnectionString2"].ConnectionString))
+            {
+                sqlCon.Open();
+                string query = "INSERT INTO Users (videoGameId, isModerator, isDeleted, userName, [password], email) VALUES (1, 0, 0, @username, @password, @email)";
+
+                SqlCommand sqlCmd = new SqlCommand(query, sqlCon);
+                sqlCmd.Parameters.AddWithValue("@username", usernameSignUp.Text.Trim());
+                sqlCmd.Parameters.AddWithValue("@password", passwordSignUp.Text.Trim());
+                sqlCmd.Parameters.AddWithValue("@email", emailSignUp.Text.Trim());
+                sqlCmd.ExecuteNonQuery();
+                sqlCon.Close();
+
+                Session["username"] = usernameSignUp.Text.Trim();
+                Response.Redirect("WebForm1.aspx");
+            }
+        }
     }
 }

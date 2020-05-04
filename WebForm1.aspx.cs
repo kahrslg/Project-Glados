@@ -40,7 +40,7 @@ namespace Project_Glados_master
             Response.Redirect("Login.aspx");
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void ButtonSearch_Click(object sender, EventArgs e)
         {
             String query = "SELECT VideoGameId, Title, Genre, Company, Price FROM VideoGames WHERE Title LIKE '%" + gameTitle.Text + "%' AND Company LIKE '%" + gameDeveloper.Text + "%'";
             SqlDataSource1.SelectCommand = query;

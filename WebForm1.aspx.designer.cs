@@ -7,10 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project_Glados_master {
+namespace Project_Glados_master
+{
 
 
-    public partial class WebForm1 {
+    public partial class WebForm1
+    {
 
         /// <summary>
         /// form2 control.
@@ -67,13 +69,13 @@ namespace Project_Glados_master {
         protected global::System.Web.UI.WebControls.DropDownList gameRating;
 
         /// <summary>
-        /// Button1 control.
+        /// ButtonSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button ButtonSearch;
 
         /// <summary>
         /// SqlDataSource1 control.

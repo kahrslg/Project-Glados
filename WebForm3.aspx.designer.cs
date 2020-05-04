@@ -7,10 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project_Glados_master {
+namespace Project_Glados_master
+{
 
 
-    public partial class WebForm3 {
+    public partial class WebForm3
+    {
 
         /// <summary>
         /// form1 control.
